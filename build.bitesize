@@ -11,9 +11,9 @@ components:
       git: git@github.com:geethaka/nodecrud.git
       branch: master
     build:
-      - shell: npm install
-	  - shell: pwd
-	  - shell: ls
+      - shell: npm install 
+      - shell: pwd
+      - shell: ls
       - shell: echo "#!/bin/sh" > nodecrud/run.sh
       - shell: echo "node app.js" >> nodecrud/run.sh
       - shell: chmod 755 nodecrud/run.sh
