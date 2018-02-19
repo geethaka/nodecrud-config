@@ -8,4 +8,4 @@ applications:
         origin:
           build: nodecrud
         version: 1.0.0
-    command: "run.sh"
+    command: "nodecrud/run.sh"
