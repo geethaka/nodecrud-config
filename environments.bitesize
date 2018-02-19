@@ -1,0 +1,14 @@
+project: btdemo
+environments:
+  - name: dev
+    namespace: btdemo-dev
+    deployment:
+      method: rolling-upgrade
+    services:
+      - name: nodecrud
+        external_url: btdemo.pearson.com
+        ssl: true
+        port: 80
+      - type: mysql  
+        name: btdemo     
+        version: 5.6

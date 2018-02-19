@@ -1,0 +1,20 @@
+project: btdemo
+components:
+  - name: nodecrud
+    os: linux
+    dependencies:
+        - type: debian-package
+          package: nodejs
+          version: 6.10.0-1nodesource1~trusty1
+          location: https://deb.nodesource.com/node_6.x/pool/main/n/nodejs/nodejs_6.10.0-1nodesource1~trusty1_amd64.deb
+    repository:
+      git: git@github.com:geethaka/nodecrud.git
+      branch: master
+    build:
+      - shell: npm install
+      - shell: echo "#!/bin/sh" > nodecrud/run.sh
+      - shell: echo "node app.js" >> nodecrud/run.sh
+      - shell: chmod 755 nodecrud/run.sh
+      - shell: fpm -s dir -C nodecrud -t deb -n nodecrud -v 1.0.0 --iteration $(date "+%Y%m%d%H%M%S") --prefix /nodecrud .
+    artifacts:
+      - location: "*.deb"

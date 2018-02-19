@@ -1,0 +1,11 @@
+project: btdemo
+applications:
+  - name: nodecrud
+    runtime: ubuntu-nodejs5x:1.2
+    dependencies:      
+      - name: nodecrud
+        type: debian-package
+        origin:
+          build: nodecrud
+        version: 1.0.0
+    command: "/nodecrud/run.sh"
