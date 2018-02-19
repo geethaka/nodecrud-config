@@ -9,3 +9,6 @@ applications:
           build: nodecrud
         version: 1.0.0
     command: "/nodecrud/run.sh"
+  - name: mysqldb
+    runtime: mysql/mysql-server:latest
+    command: "mysqld"

@@ -9,6 +9,12 @@ environments:
         external_url: btdemo.pearson.com
         ssl: true
         port: 80
-      - type: mysql  
-        name: btdemo     
-        version: 5.6
+      - name: mysqldb
+        port: 3306
+        replicas: 1
+        env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: password		  
+          - name: MYSQL_DATABASE
+            value: nodejs
+		
