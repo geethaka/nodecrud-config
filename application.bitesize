@@ -9,5 +9,3 @@ applications:
           build: nodecrud
         version: 1.0.0
     command: "run.sh"
-	
-	
