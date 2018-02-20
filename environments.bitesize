@@ -6,7 +6,7 @@ environments:
       method: rolling-upgrade
     services:
       - name: nodecrud
-        external_url: btdemo.pearson.com
+        external_url: btdemo.prsn.io
         ssl: true
         port: 80
 		env:
