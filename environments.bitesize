@@ -17,4 +17,3 @@ environments:
             value: password		  
           - name: MYSQL_DATABASE
             value: nodejs
-		
