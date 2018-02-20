@@ -9,15 +9,15 @@ environments:
         external_url: btdemo.prsn.io
         ssl: true
         port: 80
-		env:
+        env:
           - name: MYSQL_PASSWORD
             value: password		  
           - name: MYSQL_DATABASE
             value: nodejs
           - name: MYSQL_USER
-		    value: root
-		  - name: MYSQL_ENDPOINT
-		    value: mysqldb.btdemo-dev.svc.cluster.local
+            value: root
+          - name: MYSQL_ENDPOINT
+            value: mysqldb.btdemo-dev.svc.cluster.local
       - name: mysqldb
         port: 3306
         replicas: 1
