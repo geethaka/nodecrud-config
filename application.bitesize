@@ -10,5 +10,5 @@ applications:
         version: 1.0.0
     command: "/nodecrud/run.sh"
   - name: mysqldb
-    runtime: mysql-server:latest
+    runtime: thilina-mysql:5.7.17
     command: "mysqld"
