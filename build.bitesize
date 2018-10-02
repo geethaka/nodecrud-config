@@ -17,6 +17,6 @@ components:
       - shell: echo "#!/bin/sh" > run.sh
       - shell: echo "node /nodecrud/app.js" >> run.sh
       - shell: chmod 755 run.sh
-      - shell: fpm -s dir -C $PWD -t deb -n nodecrud -v 1.0.0 --iteration $(date "+%Y%m%d%H%M%S") --prefix /nodecrud .
+      - shell: fpm -s dir -C $PWD -t deb -n nodecrud -v 1.0.1 --iteration $(date "+%Y%m%d%H%M%S") --prefix /nodecrud .
     artifacts:
       - location: "*.deb"
